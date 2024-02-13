@@ -9,7 +9,6 @@ const logger = require("./middleware/logger");
 app.use(logger);
 const connection = require("./middleware/db_connect");
 
-// app.disable("x-powered-by");
 app.disable("x-powered-by");
 
 // Dashboard
