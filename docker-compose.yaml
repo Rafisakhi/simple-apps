@@ -6,6 +6,7 @@ services:
     restart: always
     env_file: ./apps/.env
     volumes:
-      - data_simpleapps:/var/lib/docker/volumes
+      - backup-simple: ./apps
 volumes:
-  data_simpleapps:
+  backup-simple:
+    external: true
