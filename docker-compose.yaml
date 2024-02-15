@@ -6,7 +6,6 @@ services:
     restart: always
     env_file: ./apps/.env
     volumes:
-      - data_simpleapps:/apps
+      - data_simpleapps:/var/lib/docker/volumes
 volumes:
   data_simpleapps:
-    external: true
