@@ -6,7 +6,11 @@ services:
     restart: always
     env_file: ./apps/.env
     volumes:
-      - backup-simple:/apps
+      - backup_data:/apps
 volumes:
-  backup-simple:
-    external: true
+  backup_data:
+    driver: local # Define the driver and options under the volume name
+    driver_opts:
+      type: none
+      device: /apps
+      o: bind
