@@ -5,12 +5,3 @@ services:
       - "10000:3000"
     restart: always
     env_file: ./apps/.env
-    volumes:
-      - backup_data:/apps
-volumes:
-  backup_data:
-    driver: local # Define the driver and options under the volume name
-    driver_opts:
-      type: none
-      device: /apps
-      o: bind
